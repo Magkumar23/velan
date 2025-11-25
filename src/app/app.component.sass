@@ -1,0 +1,153 @@
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body 
+  font-family: 'Arial', sans-serif
+  line-height: 1.6
+  color: #333
+
+.navbar 
+  background: #fff
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1)
+  position: fixed
+  width: 100%
+  top: 0
+  z-index: 1000
+
+.nav-container 
+  max-width: 1200px
+  margin: 0 auto
+  padding: 1rem 2rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.nav-logo h2 
+  color: #C76C51
+  font-size: 1.8rem
+  font-weight: bold
+
+.nav-menu 
+  display: flex
+  list-style: none
+  gap: 2rem
+
+.nav-menu a 
+  text-decoration: none
+  color: #333
+  font-weight: 500
+  transition: color 0.3s
+
+.nav-menu a:hover 
+  color: #C76C51
+
+.hero 
+  background: linear-gradient(135deg, #D2836B 0%, #E8C8AE 100%)
+  color: white
+  padding: 120px 0 80px
+  text-align: center
+
+.hero-content h1 
+  font-size: 3rem
+  margin-bottom: 1rem
+  font-weight: bold
+
+.hero-content p 
+  font-size: 1.2rem
+  margin-bottom: 2rem
+  opacity: 0.9
+
+.cta-button 
+  background: #ff6b6b
+  color: white
+  padding: 12px 30px
+  border: none
+  border-radius: 25px
+  font-size: 1.1rem
+  cursor: pointer
+  transition: background 0.3s
+
+.cta-button:hover 
+  background: #ff5252
+
+.container 
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 2rem
+
+.about, .services, .products, .contact 
+  padding: 80px 0
+
+.about 
+  background: #f8f9fa
+
+.about h2, .services h2, .products h2, .contact h2 
+  text-align: center
+  font-size: 2.5rem
+  margin-bottom: 3rem
+  color: #linear-gradient(transparent, rgba(177, 65, 31, 0.9))
+
+.about p 
+  text-align: center
+  font-size: 1.1rem
+  max-width: 800px
+  margin: 0 auto
+  line-height: 1.8
+
+.services-grid, .products-grid 
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+  gap: 2rem
+  margin-top: 2rem
+
+.service-card, .product-card 
+  background: white
+  padding: 2rem
+  border-radius: 10px
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1)
+  text-align: center
+  transition: transform 0.3s
+
+.service-card:hover, .product-card:hover 
+  transform: translateY(-5px)
+
+.service-card h3, .product-card h3 
+  color: #C76C51
+  margin-bottom: 1rem
+  font-size: 1.3rem
+
+.products 
+  background: #f8f9fa
+
+.contact 
+  background: #C76C51
+  color: white
+
+.contact h2 
+  color: white
+
+.contact-info 
+  text-align: center
+
+.contact-info p 
+  margin: 1rem 0
+  font-size: 1.1rem
+
+.footer 
+  background: #333
+  color: white
+  text-align: center
+  padding: 2rem 0
+
+@media (max-width: 768px) 
+  .nav-menu 
+    flex-direction: column
+    gap: 1rem
+  
+  .hero-content h1 
+    font-size: 2rem
+  
+  .services-grid, .products-grid 
+    grid-template-columns: 1fr

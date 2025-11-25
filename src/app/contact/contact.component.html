@@ -1,0 +1,127 @@
+<app-header></app-header>
+<div class="contact-container">
+  <!-- Contact Header -->
+  <section class="contact-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We appreciate your interest in Velan Fabricators. To better direct you in finding the right information and useful suggestions you're looking for, please contact our sales team available round the clock at your service.</p>
+    </div>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="contact-info">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-card">
+          <h3><i class="fas fa-building"></i> Head Office</h3>
+          <p>32Q7+9MV,<br>
+          Tiruvallur, Tamil Nadu 600124<br>
+          (INDIA)</p>
+        </div>
+        
+        <div class="info-card">
+          <h3><i class="fas fa-phone"></i> Sales Team</h3>
+          <p><strong>+91 8825604050</strong><br>
+          <a href="mailto:sales&#64;velan.co.in">sales&#64;velan.co.in</a></p>
+        </div>
+        
+        <div class="info-card">
+          <h3><i class="fas fa-industry"></i> Manufacturing Unit</h3>
+          <p>32Q7+9MV,<br>
+          Tiruvallur, Tamil Nadu 600124<br>
+          (INDIA)</p>
+        </div>
+        
+        <div class="info-card">
+          <h3><i class="fas fa-tools"></i> Services & Support</h3>
+          <p><strong>+91 8825604050</strong><br>
+          <a href="mailto:sales&#64;velan.co.in">sales&#64;velan.co.in</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Request Form -->
+  <section class="quote-form">
+    <div class="container">
+      <div class="form-content">
+        <div class="form-intro">
+          <h2>Quote Request</h2>
+          <p>In order for someone from our Tiruvallur office to serve you better and more efficiently, we have provided you with the option to fill out a Quote Request. We'll immediately follow-up with you. Our experience and product knowledge will help you choose the best configuration, features, and options for your particular application.</p>
+        </div>
+        
+        <form (ngSubmit)="onSubmit()" #formRef="ngForm" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" [(ngModel)]="contactForm.name" required>
+            </div>
+            <div class="form-group">
+              <label for="companyName">Company Name</label>
+              <input type="text" id="companyName" name="companyName" [(ngModel)]="contactForm.companyName">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="postalAddress">Postal Address *</label>
+            <textarea id="postalAddress" name="postalAddress" [(ngModel)]="contactForm.postalAddress" required rows="3"></textarea>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City *</label>
+              <input type="text" id="city" name="city" [(ngModel)]="contactForm.city" required>
+            </div>
+            <div class="form-group">
+              <label for="state">State *</label>
+              <input type="text" id="state" name="state" [(ngModel)]="contactForm.state" required>
+            </div>
+            <div class="form-group">
+              <label for="country">Country *</label>
+              <input type="text" id="country" name="country" [(ngModel)]="contactForm.country" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactNumber">Contact Number *</label>
+              <input type="tel" id="contactNumber" name="contactNumber" [(ngModel)]="contactForm.contactNumber" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" [(ngModel)]="contactForm.email" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="query">Query / Remarks</label>
+            <textarea id="query" name="query" [(ngModel)]="contactForm.query" rows="5" placeholder="Please describe your requirements..."></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn" [disabled]="!formRef.form.valid">
+            <i class="fas fa-paper-plane"></i> Submit Request
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="container">
+      <h2>Find Us</h2>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0!2d80.1755!3d13.2846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s32Q7%2B9MV!2sTiruvallur%2C%20Tamil%20Nadu%20600124!5e0!3m2!1sen!2sin!4v1234567890"
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+</div>
+<app-footer></app-footer>

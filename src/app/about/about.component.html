@@ -1,0 +1,96 @@
+<app-header></app-header>
+
+<main class="about-main">
+  <div class="container">
+    <div class="about-layout">
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <a (click)="setActiveSection('about')" [class.active]="activeSection === 'about'">About US</a>
+          <a (click)="setActiveSection('vision')" [class.active]="activeSection === 'vision'">Our Vision</a>
+          <a (click)="setActiveSection('mission')" [class.active]="activeSection === 'mission'">Our Mission</a>
+          <a (click)="setActiveSection('quality')" [class.active]="activeSection === 'quality'">Quality Policy</a>
+        </nav>
+      </aside>
+
+      <section class="content">
+        @if (activeSection === 'about') {
+        <div class="content-section">
+          <h1>About Velan Fabricators</h1>
+          <p>Velan Fabricators, a company that focusses on the future and always takes the long-term view in the development and production of its all trailers/axles, which are extremely robust and durable. With top-quality engineering and quality materials & components, the finish of Velan Fabricators trailers are excellent. Hardly matters, how complicated the job and how long and heavy the load is, Velan Fabricators keeps the things moving!!!</p>
+          
+          <p>Started in 1960, Velan Fabricators is now an International Brand with outstanding 6 decades of experience and powers of innovation. Velan Fabricators works round-the-clock to develop extremely robust and intelligent solutions for on- and off-road heavy-duty and oversized cargo haulage besides airport operations. Velan Fabricators indeed has an impressive global reputation for effective solutions in the challenging field of multi-modal transportation. Velan Fabricators' uncompromising commitment to practical vehicle design is combined with the highest standards of production and customer oriented sales and service. The result is Hydraulic Axles that are finely tuned for your purpose. The production is based on the highest technological standards for extremely economical and highly reliable operation.</p>
+          
+          <p>Since 1960, Velan Fabricators brand has maintained its standing as quality leader in the international market and the competition. Velan Fabricators' driving force is to consolidate this position at a time of global economic challenges and its overriding objective to guarantee a strong future for the company itself and its employees (the internal clients) of course.</p>
+          
+          <p>Velan Fabricators' plant at Manesar occupies over 7000 square meters of grounds with more than 300 employees produce vehicles for payloads ranging between 10 and over 75 tons. So far, Velan Fabricators has delivered more than 7000 Axles to over 100 companies across the country and overseas. Velan Fabricators is a top performer and global operator.</p>
+          
+          <p>Velan Fabricators is a friendly bunch and loves to hear your thoughts, comments, and feedbacks</p>
+        </div>
+        }
+
+        @if (activeSection === 'vision') {
+        <div class="content-section">
+          <h1>Our Vision</h1>
+          <p>Since 1960 Velan Fabricators, as an innovative leader, has been setting the milestones in the development and manufacture of Mechanical, Extendable, Telescopic, Skeleton, ODC, and Hydraulic trailer solutions that find a lot of interest both nationally and internationally in truck transport circles. The highlights in the history of Velan Fabricators are the ground-breaking innovations with which Velan Fabricators time and again sets innovative market standards, such as the first Hydraulic Trailer and the first Extendable trailer.</p>
+          
+          <p>Innovations from the Velan Fabricators company have been characterising the modern ODC transport for decades traditionally and have finally become the sector standard. Velan Fabricators is often the pioneer in the sector. In combination with in-house know-how, the requirements of our customers in the marketplace successful solutions with added-value in many aspects. Velan Fabricators focusses deliberately on benefits and advantages to create long-lasting added-value for the forwarding and construction, defence, mining, railways, metros, ports, power, oil & gas sectors.</p>
+          
+          <p>Being a leader in Over-Dimensional Cargo and Hydraulic Trailers, Velan Fabricators believes in building associations rather than just money. We worth our clients and care for them with full honesty and dedicated towards our work. We have aim to position an organization with remarkable strength by showcasing. Due to work reliability, we have reached on best position and became successful in manufacturing Specialized Trailers like ODC and Hydraulic which is a matter of great pride for us. We maintain always our humble of work and show stability in any dealings. Our well-trained experts meet the deadlines and offer you services remarkably on durable time. Our vision to provide affordable and durable Specialized or Special Purpose Trailers that easily fulfil your all kinds of requirements. Our clients find complete benefits with our services.</p>
+          
+          <p>Our vision is to earn lots of appreciation as the leading provider of ODC, SPTs, Hydraulic Trailers in India and abroad. Our aim to provide SPTs of highest quality to those people who need to carry their special consignment, where safety comes first. We believe on our excellence standard, dedicated employees, best trained engineers, mechanics, and operators that make sure the customers view on our services as the ultimate Specialized Transport Trailers.</p>
+        </div>
+        }
+
+        @if (activeSection === 'mission') {
+        <div class="content-section">
+          <h1>Our Mission</h1>
+          <p>Velan Fabricators has always offered a product portfolio for ODC solutions for many industries and is thus one of the leading global trailer manufacturers. Velan Fabricators reacts with traditional rapidity and skill to customer requirements and thus provides today the solutions for the transporting tasks of tomorrow. Velan Fabricators still relies today on the strengths that once made the company big: Passion for transport. Quality characterised by engineering. Innovations that have earned this name because they provide the customers with benefits. And the reliability of an owner-led family company with long-term perspectives.</p>
+          
+          <p>In addition, Velan Fabricators sets great store by the continuous development of their products and services to be able, in this way, to guarantee first class quality and optimum trailer/axles availability. The targets for the next few years are thus clearly established: healthy growth with high-quality all trailers at the optimum priceperformance.</p>
+          
+          <div class="mission-points">
+            <div class="mission-point">
+              <span class="point-number">i.</span>
+              <p>To be the most reliable and trusted trailers manufacturer, by adhering to commitments with endeavour for zero defective, on-time delivery, and standing by its customers, in their even dire need</p>
+            </div>
+            
+            <div class="mission-point">
+              <span class="point-number">ii.</span>
+              <p>Aim for customer delight, by rendering ultimate transportation solutions and amazing customer services by understanding their critical requirements and accordingly offering innovative as well as efficacious solutions, mainly for ODC transportation resulting in cost effective and intact deliveries</p>
+            </div>
+            
+            <div class="mission-point">
+              <span class="point-number">iii.</span>
+              <p>Adopt appropriate business processes integrating IT to achieve and maintain highest level of cost effectiveness and time efficiencies, enabling flexibility and responsiveness to dynamic customer needs</p>
+            </div>
+            
+            <div class="mission-point">
+              <span class="point-number">iv.</span>
+              <p>To emerge as a sole ODCs and Hydraulic trailers/axles manufacturer for all transporters and logistic service providers to collaborate and co-operate for synergy and bringing impetus in the transportation industry</p>
+            </div>
+          </div>
+        </div>
+        }
+
+        @if (activeSection === 'quality') {
+        <div class="content-section">
+          <h1>Quality Policy</h1>
+          <p>Velan Fabricators, a leading ODC, Hydraulic Axles Modular Trailers, hydraulically compensated goose necks, Extendable trailers, Telescopic trailers, Chassis carriers, Low/Flat Bed trailers, Tipping trailers, Tippers, Tankers, Drop decks, Bolsters, Spares etc. manufacturer is committed to provide quality products which correspond to the requirement and expectation of its customers. The kind of quality, customer services, after sales services, prices, on time delivery, and so on that Velan Fabricators offers to its clients, is a significant reason for choosing Velan Fabricators as an SPTs manufacturer.</p>
+          
+          <p>The whole organization as well as every individual is committed to work for continuous development of our products on quality basis that help us to achieve customer satisfaction. We work with latest trend and technology and always meet the deadlines, cost and exploiting market value in different areas. Our quality policy depends on our dedicated engineers, mechanics, designers, and an R & D department that enable individuals to recognize their complete possibilities. We strive to advance the values of liable choice, personal satisfaction, enclosure, and significant opportunities through consumer empowerment.</p>
+          
+          <p>Our work efficiency, meeting deadlines, maximizing market effectiveness have become possible through our best likely way options, proper intermediaries and management strategies of destination in the course of full-fledged management system that play a key role in pleasing our clients with remarkably wonderful products & services. We go through the latest technology, fresh growth in market to accomplish the essential requirement of quality products in this competitive age of business.</p>
+          
+          <p>As a leading ODC and Hydraulic Trailers/Axles manufacturer in India and abroad, Velan Fabricators offers you quality products which include ODC trailers, Hydraulic trailers, and Extendable trailers at quite competitive and affordable rates. Velan Fabricators not at all compromises with its quality policy and always meets deadlines. Velan Fabricators is such a quality trailer manufacturer in India, which always concerns about its valuable customers and tries its best to fulfil all possible needs of its customers.</p>
+        </div>
+        }
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2018 Velan Fabricators Pvt. Ltd.</p>
+  </div>
+</footer>

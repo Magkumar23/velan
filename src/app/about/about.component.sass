@@ -1,0 +1,234 @@
+// Variables
+$primary-red: #B1411F
+$secondary-blue: #C76C51
+$accent-red: #B1411F
+$white: #ffffff
+$light-gray: #f8fafc
+$dark-gray: #374151
+
+// Social Bar & Header (reused from home)
+.social-bar
+  background: $primary-red
+  color: $white
+  padding: 8px 0
+  font-size: 14px
+
+  .social-icons
+    display: inline-block
+    margin-right: 20px
+
+    a
+      color: $white
+      margin-right: 10px
+      text-decoration: none
+      
+      &:hover
+        color: $accent-red
+
+  .contact-info
+    float: right
+    
+    span
+      margin-left: 20px
+      
+      i
+        margin-right: 5px
+
+.header
+  position: sticky
+  top: 0
+  z-index: 1000
+  background: $white
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1)
+
+.navbar
+  background: $white
+  padding: 15px 0
+  
+  .nav-container
+    max-width: 1200px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 20px
+
+  .nav-logo
+    .logo
+      height: 50px
+
+  .nav-menu
+    display: flex
+    list-style: none
+    margin: 0
+    padding: 0
+    
+    li
+      margin-left: 30px
+      
+      a
+        text-decoration: none
+        color: $dark-gray
+        font-weight: 500
+        padding: 10px 15px
+        border-radius: 5px
+        transition: all 0.3s ease
+        
+        &.active,
+        &:hover
+          color: $secondary-blue
+          background: rgba(59, 130, 246, 0.1)
+
+// About Main Layout
+.about-main
+  min-height: 80vh
+  padding: 40px 0
+
+.about-layout
+  display: grid
+  grid-template-columns: 300px 1fr
+  gap: 40px
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 20px
+
+// Sidebar Navigation
+.sidebar
+  background: $primary-red
+  border-radius: 10px
+  height: fit-content
+  overflow: hidden
+
+.sidebar-nav
+  display: flex
+  flex-direction: column
+
+  a
+    color: $white
+    padding: 20px 25px
+    text-decoration: none
+    font-weight: 500
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+    cursor: pointer
+    transition: all 0.3s ease
+    
+    &:hover
+      background: rgba(255, 255, 255, 0.1)
+      padding-left: 35px
+    
+    &.active
+      background: $white
+      color: $primary-red
+      font-weight: 600
+    
+    &:last-child
+      border-bottom: none
+
+// Content Section
+.content
+  background: $white
+  padding: 0
+
+.content-section
+  h1
+    color: $accent-red
+    font-size: 2.2rem
+    margin-bottom: 30px
+    font-weight: 600
+  
+  p
+    color: $dark-gray
+    line-height: 1.8
+    margin-bottom: 20px
+    font-size: 1rem
+    text-align: justify
+
+// Mission Points
+.mission-points
+  margin-top: 30px
+
+.mission-point
+  display: flex
+  margin-bottom: 25px
+  align-items: flex-start
+  
+  .point-number
+    color: $accent-red
+    font-weight: bold
+    font-size: 1.1rem
+    margin-right: 15px
+    margin-top: 2px
+    min-width: 20px
+  
+  p
+    margin: 0
+    flex: 1
+
+// Footer
+.footer
+  background: $primary-red
+  color: $white
+  padding: 30px 0
+  text-align: left
+  border-top: 3px solid $accent-red
+  margin-top: 50px
+
+  p
+    margin: 0
+    font-size: 0.9rem
+
+// Container
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 20px
+
+// Responsive Design
+@media (max-width: 768px)
+  .social-bar
+    .contact-info
+      float: none
+      display: block
+      text-align: center
+      margin-top: 10px
+
+  .nav-container
+    flex-direction: column
+    
+  .nav-menu
+    margin-top: 20px
+    flex-wrap: wrap
+    justify-content: center
+    
+    li
+      margin: 5px 10px
+
+  .about-layout
+    grid-template-columns: 1fr
+    gap: 20px
+    
+  .sidebar
+    order: 2
+    
+  .sidebar-nav
+    flex-direction: row
+    overflow-x: auto
+    
+    a
+      white-space: nowrap
+      min-width: 120px
+      text-align: center
+      padding: 15px 20px
+      
+      &:hover
+        padding-left: 20px
+
+  .content
+    order: 1
+    
+  .content-section
+    h1
+      font-size: 1.8rem
+    
+    p
+      font-size: 0.95rem

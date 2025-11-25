@@ -1,0 +1,223 @@
+// Variables
+$primary-red: #B1411F
+$secondary-golden: #F2B632
+$accent-color: #A7371E
+$white: #ffffff
+$light-gray: #f8fafc
+$dark-gray: #374151
+
+.clients-container
+  min-height: 100vh
+
+// Hero Section
+.clients-hero
+  background: linear-gradient(135deg, $primary-red 0%, $accent-color 100%)
+  color: $white
+  padding: 80px 0
+  text-align: center
+  
+  h1
+    font-size: 2.5rem
+    margin-bottom: 30px
+    font-weight: 600
+    
+  p
+    font-size: 1.2rem
+    line-height: 1.6
+    max-width: 900px
+    margin: 0 auto
+
+// Client Description
+.client-description
+  background: $white
+  padding: 60px 0
+  
+  .description-content
+    max-width: 900px
+    margin: 0 auto
+    
+    p
+      color: $dark-gray
+      font-size: 1.1rem
+      line-height: 1.8
+      margin-bottom: 25px
+      text-align: justify
+      
+  .contact-cta
+    background: $light-gray
+    padding: 25px
+    border-radius: 10px
+    border-left: 4px solid $primary-red
+    margin-top: 30px
+    
+    p
+      margin: 0
+      font-size: 1.1rem
+      
+    a
+      color: $primary-red
+      text-decoration: none
+      
+      &:hover
+        text-decoration: underline
+
+// Clients Showcase
+.clients-showcase
+  background: $light-gray
+  padding: 80px 0
+  
+  h2
+    text-align: center
+    color: $primary-red
+    font-size: 2.2rem
+    margin-bottom: 50px
+    font-weight: 600
+    
+  .clients-grid
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+    gap: 30px
+    
+  .client-card
+    background: $white
+    border-radius: 10px
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1)
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    border: 3px solid transparent
+    background-clip: padding-box
+    position: relative
+    overflow: hidden
+    height: 200px
+    opacity: 0
+    transform: translateY(30px) scale(0.9)
+    animation: fadeInUp 0.6s ease-out forwards
+    
+    // Staggered animation delay for each card
+    @for $i from 1 through 10
+      &:nth-child(#{$i})
+        animation-delay: #{$i * 0.1}s
+    
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: linear-gradient(45deg, $primary-red, $secondary-golden, $primary-red, $secondary-golden)
+      background-size: 400% 400%
+      border-radius: 10px
+      z-index: -1
+      animation: borderGlow 3s ease-in-out infinite
+      opacity: 0
+      transition: opacity 0.4s ease
+    
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 0
+      height: 0
+      background: rgba(255, 255, 255, 0.3)
+      border-radius: 50%
+      transform: translate(-50%, -50%)
+      transition: all 0.6s ease
+      z-index: 1
+      pointer-events: none
+    
+    &:hover
+      transform: translateY(-12px) scale(1.05) rotateY(5deg)
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25)
+      
+      &::before
+        opacity: 1
+        
+      &::after
+        width: 300px
+        height: 300px
+      
+    .client-logo
+      width: 100%
+      height: 100%
+      position: relative
+      
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        filter: grayscale(100%) brightness(0.8)
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+        border-radius: 7px
+        
+    &:hover
+      .client-logo img
+        filter: grayscale(0%) brightness(1.1)
+        transform: scale(1.1) rotate(2deg)
+        
+    h3
+      color: $dark-gray
+      font-size: 1.2rem
+      font-weight: 600
+      margin: 0
+
+// Container
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 20px
+
+// Keyframe Animations
+@keyframes borderGlow
+  0%
+    background-position: 0% 50%
+  50%
+    background-position: 100% 50%
+  100%
+    background-position: 0% 50%
+
+@keyframes fadeInUp
+  0%
+    opacity: 0
+    transform: translateY(30px) scale(0.9)
+  100%
+    opacity: 1
+    transform: translateY(0) scale(1)
+
+@keyframes pulse
+  0%, 100%
+    transform: scale(1)
+  50%
+    transform: scale(1.05)
+
+// Responsive Design
+@media (max-width: 768px)
+  .clients-hero
+    padding: 50px 0
+    
+    h1
+      font-size: 2rem
+      
+    p
+      font-size: 1rem
+      
+  .client-description
+    padding: 40px 0
+    
+    .description-content
+      p
+        font-size: 1rem
+        
+  .clients-showcase
+    padding: 50px 0
+    
+    h2
+      font-size: 1.8rem
+      margin-bottom: 30px
+      
+    .clients-grid
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+      gap: 20px
+      
+    .client-card
+      padding: 30px 15px

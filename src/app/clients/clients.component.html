@@ -1,0 +1,42 @@
+<app-header></app-header>
+
+<div class="clients-container">
+  <!-- Hero Section -->
+  <section class="clients-hero">
+    <div class="container">
+      <h1>Our Prestigious Clients</h1>
+      <p>Everyone aims for success and your success defines Velan Fabricators' own success. Velan Fabricators always likes to work with ambitious start-ups as well as small- and medium-sized transporters. It doesn't really matter to Velan Fabricators how big transporter you're, it's about you, your mindset, and your passion for what you do.</p>
+    </div>
+  </section>
+
+  <!-- Client Description -->
+  <section class="client-description">
+    <div class="container">
+      <div class="description-content">
+        <p>Are you really serious, motivated, driven, and determined to see your Transport Business succeed? Do you have a clear vision of where you want to be? Then let's talk. Velan Fabricators loves people like you because genuinely wants to help the entire Transport Industry to succeed, so it's quite important for Velan Fabricators to work with people on the same wavelength. Velan Fabricators becomes an extension of your company, reflecting your energy, excitement, and passion back at your customers and prospects.</p>
+        
+        <p>Everything Velan Fabricators does is consistent and measured, carefully thought through, implemented creatively and intelligently. Velan Fabricators loves to give its clients the best of the industry. Velan Fabricators likes to interact with its every single customer to add a personal touch, with face-to-face monthly meetings and regular contact.</p>
+        
+        <div class="contact-cta">
+          <p>Get in touch with Sales team to find out more, he is just a call <strong>+91 8825604050</strong> or an email <a href="mailto:sales&#64;velan.co.in">sales&#64;velan.co.in</a> away from you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Grid -->
+  <section class="clients-showcase">
+    <div class="container">
+      <h2>Here are some all-stars we've worked with over the years:</h2>
+      <div class="clients-grid">
+        <div class="client-card" *ngFor="let client of clients">
+          <div class="client-logo">
+            <img [src]="client.logo" alt="Client Logo" (error)="onImageError($event)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<app-footer></app-footer>

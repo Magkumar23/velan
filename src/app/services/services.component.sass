@@ -1,0 +1,229 @@
+// Variables
+$primary-red: #B1411F
+$secondary-orange: #f97316
+$accent-color: #ea580c
+$white: #ffffff
+$light-gray: #f8fafc
+$dark-gray: #374151
+
+.services-page
+  min-height: 100vh
+
+.hero-section
+  background: $primary-red
+  color: $white
+  padding: 80px 0
+  text-align: center
+
+  h1
+    font-size: 3rem
+    margin-bottom: 20px
+    font-weight: 700
+
+  p
+    font-size: 1.2rem
+    opacity: 0.9
+    max-width: 800px
+    margin: 0 auto
+
+.services-content
+  padding: 80px 0
+
+.service-intro
+  text-align: center
+  margin-bottom: 60px
+  
+  p
+    font-size: 1.1rem
+    color: $dark-gray
+    max-width: 800px
+    margin: 0 auto
+
+section
+  margin-bottom: 60px
+
+  h2
+    color: $primary-red
+    font-size: 2rem
+    margin-bottom: 30px
+    text-align: center
+    font-weight: 600
+
+  h3
+    color: $primary-red
+    font-size: 1.5rem
+    margin-bottom: 20px
+    font-weight: 600
+
+.services-grid
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+  gap: 20px
+
+.service-item
+  background: $white
+  padding: 20px
+  border-radius: 8px
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1)
+  border-left: 4px solid $secondary-orange
+  transition: all 0.3s ease
+
+  &:hover
+    transform: translateY(-3px)
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15)
+    border-left-color: $primary-red
+
+.repair-categories
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+  gap: 20px
+
+.repair-category
+  background: $light-gray
+  padding: 30px
+  text-align: center
+  border-radius: 10px
+  transition: all 0.3s ease
+
+  &:hover
+    background: $secondary-orange
+    color: $white
+    transform: translateY(-5px)
+
+.tiers-grid
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+  gap: 30px
+  margin-bottom: 30px
+
+.tier
+  background: $white
+  border-radius: 10px
+  padding: 30px
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1)
+  border-top: 4px solid $secondary-orange
+
+  &:nth-child(2)
+    border-top-color: $primary-red
+
+  &:nth-child(3)
+    border-top-color: $accent-color
+
+  h3
+    color: $primary-red
+    margin-bottom: 10px
+
+  h4
+    color: $dark-gray
+    font-size: 1rem
+    margin-bottom: 20px
+
+  ul
+    list-style: none
+    padding: 0
+
+    li
+      padding: 8px 0
+      border-bottom: 1px solid #eee
+      color: $dark-gray
+
+      &:last-child
+        border-bottom: none
+
+.tier-notes
+  background: $light-gray
+  padding: 20px
+  border-radius: 8px
+
+  p
+    margin-bottom: 10px
+    font-size: 0.9rem
+    color: $dark-gray
+
+    &:last-child
+      margin-bottom: 0
+
+.benefits-grid
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+  gap: 25px
+
+.benefit-item
+  background: $white
+  padding: 25px
+  border-radius: 10px
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1)
+  border-left: 4px solid $secondary-orange
+
+  h4
+    color: $primary-red
+    margin-bottom: 15px
+    font-size: 1.2rem
+
+  p
+    color: $dark-gray
+    line-height: 1.6
+
+.used-services
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+  gap: 30px
+
+.used-service
+  background: $light-gray
+  padding: 30px
+  border-radius: 10px
+
+  h4
+    color: $primary-red
+    margin-bottom: 15px
+
+  p
+    color: $dark-gray
+    line-height: 1.6
+
+.contact-grid
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+  gap: 30px
+
+.contact-item
+  background: $primary-red
+  color: $white
+  padding: 30px
+  border-radius: 10px
+
+  h3
+    margin-bottom: 20px
+
+  p
+    line-height: 1.6
+    margin-bottom: 15px
+
+    &:last-child
+      margin-bottom: 0
+
+    strong
+      color: $white
+
+@media (max-width: 768px)
+  .hero-section
+    padding: 50px 0
+
+    h1
+      font-size: 2.2rem
+
+    p
+      font-size: 1rem
+
+  .services-content
+    padding: 50px 0
+
+  .services-grid,
+  .repair-categories,
+  .tiers-grid,
+  .benefits-grid,
+  .used-services,
+  .contact-grid
+    grid-template-columns: 1fr
+    gap: 20px

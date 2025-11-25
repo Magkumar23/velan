@@ -1,0 +1,126 @@
+<app-header></app-header>
+
+<main>
+  <section class="hero">
+    <div class="hero-slider">
+      <div class="hero-slide active">
+        <img src="assets/forest-plum-5vGE-XKxnlI-unsplash.jpg" alt="Velan Trailer" class="hero-image">
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <h1>Velan: From Design to Fabrication | Innovative Ideas | Superior Solutions</h1>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-slide">
+        <img src="assets/forest-plum-t5vwXxff4Uw-unsplash.jpg" alt="Hydraulic Trailer" class="hero-image">
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <h1>Advanced Hydraulic Trailer Solutions for Heavy Transport</h1>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-slide">
+        <img src="assets/portcalls-asia-JZ0IIWzB52c-unsplash.jpg" alt="Telescopic Trailer" class="hero-image">
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <h1>Telescopic Trailers for Versatile Cargo Solutions</h1>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-slide">
+        <img src="assets/forest-plum-9Jun50-4sYs-unsplash.jpg" alt="ODC Trailer" class="hero-image">
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <h1>Over Dimensional Cargo Transport Excellence</h1>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-slide">
+        <img src="assets/forest-plum-WuYe3F0gL4s-unsplash.jpg" alt="Modular Trailer" class="hero-image">
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <h1>Modular Trailer Systems for Complex Logistics</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Carousel Navigation -->
+    <button class="carousel-btn prev-btn" (click)="previousSlide()">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="carousel-btn next-btn" (click)="nextSlide()">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <button 
+        *ngFor="let slide of slides; let i = index" 
+        class="indicator" 
+        [class.active]="i === currentSlide"
+        (click)="goToSlide(i)">
+      </button>
+    </div>
+  </section>
+
+  <section class="company-intro">
+    <div class="container">
+      <div class="intro-content">
+        <h2>Velan: From Design to Fabrication | Innovative Ideas | Superior Solutions</h2>
+        <div class="decorative-line">
+          <span class="diamond">♦</span>
+        </div>
+        <p>Velan, a company that focusses on the future and always takes the long-term view in the development and production of its all trailers/axles, which are extremely robust and durable. With top-quality engineering and quality materials & components, the finish of Velan trailers are excellent. Hardly matters, how complicated the job and how long and heavy the load is, Velan keeps the things moving!!!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-showcase">
+    <div class="container">
+      <h2>Velan Trailers</h2>
+      <div class="decorative-line">
+        <span class="diamond">♦</span>
+      </div>
+      
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="assets/hydraulic-trailer.jpeg" alt="Hydraulic Axles Modular Trailers">
+          <div class="product-overlay">
+            <h3>HYDRAULIC AXLES MODULAR TRAILERS (HAMT)</h3>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <img src="assets/telescopic-trailer.jpeg" alt="Telescopic Trailers">
+          <div class="product-overlay">
+            <h3>TELESCOPIC TRAILERS</h3>
+          </div>
+        </div>
+        
+        <div class="product-card">
+          <img src="assets/trailer4.jpeg" alt="Girder Bridge">
+          <div class="product-overlay">
+            <h3>Girder Bridge</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mission">
+    <div class="container">
+      <h2>Our Mission</h2>
+      <div class="decorative-line">
+        <span class="diamond">♦</span>
+      </div>
+      <p>Velan has always offered a product portfolio for ODC solutions for many industries and is thus one of the leading global trailer manufacturers. Velan reacts with traditional rapidity and skill to customer requirements and thus provides today the solutions for the transporting tasks of tomorrow. Velan still relies today on the strengths that once made the company big: Passion for transport....</p>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>
