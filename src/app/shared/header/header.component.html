@@ -22,17 +22,20 @@
    
   
   <nav class="navbar">
-    <span class="logo-section">
-    <img src="assets/velan-logo.png" alt="Velan" class="logo">
-   </span>
     <div class="nav-container">
-      <ul class="nav-menu">
-        <li><a routerLink="/home" routerLinkActive="active"><i class="fas fa-home"></i> Home</a></li>
-        <li><a routerLink="/about" routerLinkActive="active"><i class="fas fa-info-circle"></i> About Velan</a></li>
-        <li><a routerLink="/products" routerLinkActive="active"><i class="fas fa-box"></i> Velan Products</a></li>
-        <li><a routerLink="/services" routerLinkActive="active"><i class="fas fa-cogs"></i> Services</a></li>
-        <li><a routerLink="/clients" routerLinkActive="active"><i class="fas fa-users"></i> Clients</a></li>
-        <li><a routerLink="/contact" routerLinkActive="active"><i class="fas fa-envelope"></i> Contact Us</a></li>
+      <div class="logo-section">
+        <img src="assets/velan-logo.png" alt="Velan" class="logo">
+      </div>
+      <button class="mobile-menu-btn" (click)="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu" [class.active]="isMobileMenuOpen">
+        <li><a routerLink="/home" routerLinkActive="active" (click)="closeMobileMenu()"><i class="fas fa-home"></i> Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active" (click)="closeMobileMenu()"><i class="fas fa-info-circle"></i> About Velan</a></li>
+        <li><a routerLink="/products" routerLinkActive="active" (click)="closeMobileMenu()"><i class="fas fa-box"></i> Velan Products</a></li>
+        <li><a routerLink="/services" routerLinkActive="active" (click)="closeMobileMenu()"><i class="fas fa-cogs"></i> Services</a></li>
+        <li><a routerLink="/clients" routerLinkActive="active" (click)="closeMobileMenu()"><i class="fas fa-users"></i> Clients</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMobileMenu()"><i class="fas fa-envelope"></i> Contact Us</a></li>
       </ul>
     </div>
   </nav>
